@@ -5,6 +5,7 @@ interface ShiftState {
   shifts: Shift[];
   setShifts: (shifts: Shift[]) => void;
   addShift: (shift: Shift) => void;
+  addShifts: (shifts: Shift[]) => void;
   updateShift: (shift: Shift) => void;
   deleteShift: (id: string) => void;
 }
@@ -31,6 +32,7 @@ const useShiftStore = create<ShiftState>((set) => ({
   ],
   setShifts: (shifts) => set({ shifts }),
   addShift: (shift) => set((state) => ({ shifts: [...state.shifts, shift] })),
+  addShifts: (newShifts) => set((state) => ({ shifts: [...state.shifts, ...newShifts] })),
   updateShift: (updatedShift) =>
     set((state) => ({
       shifts: state.shifts.map((shift) =>
