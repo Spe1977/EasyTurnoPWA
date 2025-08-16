@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- backup_rules.xml -->
+<!--
+  Header: Regole di backup per Android Auto Backup.
+  Qui si specificano quali file includere o escludere dal backup automatico su Google Drive.
+  Per EasyTurno, vogliamo backuppare le preferenze (SharedPreferences) ma escludere
+  il database di Room, che sarà gestito tramite export/import manuale.
+-->
+<full-backup-content>
+    <!-- Esclude il database di Room dal backup automatico -->
+    <exclude
+        domain="database"
+        path="TurnoDatabase.db" />
+    <!-- Includi tutte le SharedPreferences -->
+    <include
+        domain="sharedpref"
+        path="." />
+</full-backup-content>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- themes.xml -->
+<!-- Header: Tema principale dell'applicazione basato su Material 3. -->
+<resources xmlns:tools="http://schemas.android.com/tools">
+  <!--
+    Tema base dell'applicazione.
+    - Parent: Theme.Material3.DayNight.NoActionBar
+      - DayNight: Seleziona automaticamente tema chiaro o scuro.
+      - NoActionBar: Necessario per app che usano Jetpack Compose per la UI.
+    - Dynamic Colors (Material You):
+      - Questa funzionalità è attivata a livello di codice nell'UI Compose,
+        non tramite XML. Il tema XML fornisce un fallback solido.
+  -->
+  <style name="Theme.EasyTurno" parent="Theme.Material3.DayNight.NoActionBar">
+    <!-- Colori primari del tema (fallback per versioni pre-Android 12) -->
+    <item name="colorPrimary">@color/md_theme_light_primary</item>
+    <item name="colorPrimaryContainer">@color/md_theme_light_primaryContainer</item>
+    <item name="colorOnPrimary">@color/md_theme_light_onPrimary</item>
+    <item name="colorOnPrimaryContainer">@color/md_theme_light_onPrimaryContainer</item>
+
+    <!-- Altri colori del tema se necessario -->
+
+    <!-- Impostazioni per la status bar -->
+    <item name="android:statusBarColor">@android:color/transparent</item>
+    <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+  </style>
+</resources>

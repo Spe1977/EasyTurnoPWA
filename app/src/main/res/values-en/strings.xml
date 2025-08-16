@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- strings.xml (English) -->
+<!-- Header: String resources for the English language. -->
+<resources>
+    <string name="app_name">EasyTurno</string>
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- data_extraction_rules.xml -->
+<!--
+  Header: Regole di estrazione dati per il trasporto e il ripristino del dispositivo.
+  Queste regole definiscono quali file e directory dell'app possono essere
+  copiati dal dispositivo durante operazioni come `adb backup`.
+  La configurazione di default è restrittiva per motivi di sicurezza.
+-->
+<data-extraction-rules>
+    <cloud-backup>
+        <!--
+          Le regole definite in backup_rules.xml vengono applicate qui.
+          È possibile aggiungere ulteriori regole specifiche per il backup su cloud.
+        -->
+        <include domain="sharedpref" path="."/>
+        <exclude domain="database" path="TurnoDatabase.db"/>
+    </cloud-backup>
+    <device-transfer>
+        <!--
+          Le regole qui si applicano quando un utente trasferisce dati a un nuovo dispositivo.
+          Per EasyTurno, permettiamo il trasferimento delle preferenze ma non del database,
+          per coerenza con la strategia di backup.
+        -->
+        <include domain="sharedpref" path="."/>
+        <exclude domain="database" path="TurnoDatabase.db"/>
+    </device-transfer>
+</data-extraction-rules>
