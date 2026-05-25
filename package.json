@@ -36,14 +36,14 @@
     "test:pw:install": "playwright install --with-deps chromium"
   },
   "dependencies": {
-    "@angular/build": "^21.2.11",
-    "@angular/cli": "^21.2.5",
-    "@angular/common": "^21.2.5",
-    "@angular/compiler": "^21.2.5",
-    "@angular/compiler-cli": "^21.2.5",
-    "@angular/core": "^21.2.5",
-    "@angular/forms": "^21.2.5",
-    "@angular/platform-browser": "^21.2.5",
+    "@angular/build": "^21.2.12",
+    "@angular/cli": "^21.2.12",
+    "@angular/common": "^21.2.14",
+    "@angular/compiler": "^21.2.14",
+    "@angular/compiler-cli": "^21.2.14",
+    "@angular/core": "^21.2.14",
+    "@angular/forms": "^21.2.14",
+    "@angular/platform-browser": "^21.2.14",
     "@capacitor/android": "^8.3.0",
     "@capacitor/app": "^8.1.0",
     "@capacitor/cli": "^8.3.0",
@@ -57,7 +57,7 @@
     "rxjs": "^7.8.2"
   },
   "devDependencies": {
-    "@angular/platform-browser-dynamic": "^21.2.5",
+    "@angular/platform-browser-dynamic": "^21.2.14",
     "@cypress/angular": "^4.0.0",
     "@eslint/js": "^10.0.1",
     "@playwright/test": "^1.58.2",
